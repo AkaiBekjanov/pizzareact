@@ -1,0 +1,122 @@
+.header {
+  margin-top: 43px ;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    display: flex;
+    column-gap: 17px;
+    align-items: center;
+    justify-content: center;
+
+    @media(max-width:510px){
+      
+       column-gap: 5px;  
+  }
+    img {
+      max-width: 100%;
+    }
+   
+  }
+  &__title {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+  
+
+    h1 {
+      margin: 0;
+      font-family: "Proxima Nova";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+
+      color: #181818;
+      @media(max-width:510px){
+      
+          font-size: 14px;
+          line-height: 130%;
+      
+      }
+    }
+    p {
+      margin: 0;
+      font-family: "Proxima Nova";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+
+      color: #7b7b7b;
+      @media(max-width:510px){
+        
+          display: none;
+        
+      }
+    }
+  }
+  &__checkout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 13px;
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    background: #fe5f1e;
+    @media(max-width:768px){
+      display: none;
+    }
+  
+  }
+  &__basket{
+    svg{
+        background-color:transparent;
+    }
+  }
+  &__basket,&__price{
+    background-color: transparent;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #ffffff;
+}
+&__menu{
+     display: none;
+     flex-direction: column;
+     gap:5px;
+     width: 57px;
+ 
+     height:34px;
+     cursor: pointer;
+     &_active{
+          .header__menu-link:nth-child(1){
+              transform: translateY(12px) rotateZ(45deg);
+          }
+          .header__menu-link:nth-child(2){
+            transform: scale(0);
+          }
+          .header__menu-link:nth-child(3){
+            transform: translateY(-12px) rotateZ(-45deg);
+          }
+     }
+     &-link{
+      transition: all 0.5s ease;
+      height:7px;
+      background-color: #181818;
+    
+     }
+     @media(max-width:768px){
+      display: flex;
+    }
+}
+}
